@@ -27,7 +27,7 @@ var arr = Array();
 
 
 // FUNCTIONS
-function allGraph(page) {
+function allGraph() {
   var url_json = 'population_density';
   $.getJSON('centroids/centroid-'+url_json+'.json', function(data) {
     $.each(data.features, function (index, value) {
