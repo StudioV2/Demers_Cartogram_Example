@@ -28,7 +28,7 @@ var arr = Array();
 
 // FUNCTIONS
 function allGraph() {
-  var url_json = 'population_density';
+  var url_json = 'data';
   $.getJSON('centroids/centroid-'+url_json+'.json', function(data) {
     $.each(data.features, function (index, value) {
         arr.push([value.id, value.properties.value]);
@@ -38,7 +38,7 @@ function allGraph() {
 }
 
 function graph() {
-  d3.json("centroids/centroid-all.json", function(error, states) {
+  d3.json("centroids/centroid-country.json", function(error, states) {
     if (error) throw error;
 
     var nodes = states.features
