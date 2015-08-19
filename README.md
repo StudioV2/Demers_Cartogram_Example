@@ -1,7 +1,7 @@
-![](https://raw.githubusercontent.com/StudioV2/Demers_Cartogram_Example/master/world-map.png)
 
 # Demers Cartogram Example
 Simple exemple of a demers cartogram in JavaScript using d3.js and jQuery.
+![World-Map](https://raw.githubusercontent.com/StudioV2/Demers_Cartogram_Example/master/world-map.png)
 
 
 ## 
