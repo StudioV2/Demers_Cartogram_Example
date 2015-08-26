@@ -8,7 +8,7 @@ Simple example of a demers cartogram in JavaScript using d3.js and jQuery.
 
 ## What this project do ?
 
-This project provides a representation of data on a map as squares. The squares are proportionals to their value. It bring out the data, regardless the size of the country.
+This project provides a **representation of data on a map as squares**. The squares are proportionals to their value. It bring out the data, regardless the size of the country.
 	
 
 ## Informations
@@ -25,7 +25,7 @@ This cartogram works directly with Firefox.
 
 For the others browser you need a local server like Mamp (Mac) or Wamp (Windows).
 
-The raison is the json cannot be load by Safari, Chrome, etc.. without a local server.
+The reason is the json file cannot be load by Safari, Chrome, etc.. without a local server.
 
 ### Install
 
@@ -80,7 +80,7 @@ This cartogram use 2 json files who content the [centroids](https://en.wikipedia
 
 * **centroid-data.json** content the centroids of the countries you want to display, and their values who define the size of the squares. 
 
-**NOTE:** The data value need to be a percentage.
+**NOTE:** The data value need to be a **percentage** for the moment.
 
 
 
