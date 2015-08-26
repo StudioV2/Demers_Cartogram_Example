@@ -22,7 +22,9 @@ The data used are fictive, they were created juste for this exemple.
 ### Requirements
 
 This cartogram works directly with Firefox.
+
 For the others browser you need a local server like Mamp (Mac) or Wamp (Windows).
+
 The raison is the json cannot be load by Safari, Chrome, etc.. without a local server.
 
 ### Install
