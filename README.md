@@ -74,11 +74,11 @@ For a simple use of the cartogram, you can found 4 settings in **index.html**
 
 #### Data (Json)
 
-This cartogram use 2 json files who content the [centroids](https://en.wikipedia.org/wiki/Centroid) of some country.
+This cartogram use 2 json files who content the [centroids](https://en.wikipedia.org/wiki/Centroid) of some countries.
 
-**centroid-country.json** content the centroids of 236 countries for define the cartogram.
+* **centroid-country.json** content the centroids of 236 countries for define the cartogram.
 
-**centroid-data.json** content the centroids of the countries you want to display, and their values who define the size of the squares. 
+* **centroid-data.json** content the centroids of the countries you want to display, and their values who define the size of the squares. 
 
 **NOTE:** The data value need to be a percentage.
 
