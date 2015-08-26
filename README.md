@@ -31,9 +31,10 @@ The raison is the json cannot be load by Safari, Chrome, etc.. without a local s
 
 Just clone [this repository](https://github.com/StudioV2/Demers_Cartogram_Example) on your desktop and run **index.html** with you browser.
 
-### Configuration
+### Configurations
 
-For a simple use of the cartogram, you can found 4 options in **index.html** 
+#### Settings
+For a simple use of the cartogram, you can found 4 settings in **index.html** 
 
 ```javascript
 	// The maximum value among your centroid
@@ -70,5 +71,20 @@ For a simple use of the cartogram, you can found 4 options in **index.html**
 	    }
     }
 ```
+
+#### Data (Json)
+
+This cartogram use 2 json files who content the [centroids](https://en.wikipedia.org/wiki/Centroid) of some country.
+
+**centroid-country.json** content the centroids of 236 countries for define the cartogram.
+
+**centroid-data.json** content the centroids of the countries you want to display, and their values who define the size of the squares. 
+
+**NOTE:** The data value need to be a percentage.
+
+
+
+
+
 
 
