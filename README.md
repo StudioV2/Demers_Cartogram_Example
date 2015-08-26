@@ -31,9 +31,9 @@ The reason is the json file cannot be load by Safari, Chrome, etc.. without a lo
 
 Just clone [this repository](https://github.com/StudioV2/Demers_Cartogram_Example) on your desktop and run **index.html** with you browser.
 
-### Configurations
+## Configurations
 
-#### Settings
+### Settings
 For a simple use of the cartogram, you can found 4 settings in **index.html** 
 
 ```javascript
@@ -72,7 +72,7 @@ For a simple use of the cartogram, you can found 4 settings in **index.html**
     }
 ```
 
-#### Data (Json)
+### Data (Json)
 
 This cartogram use 2 json files who content the [centroids](https://en.wikipedia.org/wiki/Centroid) of some countries.
 
