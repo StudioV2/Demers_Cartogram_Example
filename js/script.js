@@ -6,14 +6,6 @@ var margin = {top: 0, right: 0 , bottom: 0, left: 0},
     height = (428 - margin.top - margin.bottom)*taille,
     padding = 0;
 
-var projection = d3.geo.equirectangular()
-    .scale(114*taille)
-    .translate([width / 2, height / 2]);
-
-var radius = d3.scale.sqrt()
-    .domain([0, .165]) // MAX value ratio OR "d3.max(value)" 
-    .range([0, 30]);
-
 var force = d3.layout.force()
     .charge(0)
     .gravity(0)
@@ -27,17 +19,26 @@ var arr = Array();
 
 
 // FUNCTIONS
-function allGraph() {
+function allGraph(maxValue, ratio, scale) {
   var url_json = 'data';
   $.getJSON('centroids/centroid-'+url_json+'.json', function(data) {
     $.each(data.features, function (index, value) {
         arr.push([value.id, value.properties.value]);
     });
-    graph();
+
+    var projection = d3.geo.equirectangular()
+      .scale(scale*taille) //default 114
+      .translate([width / 2, height / 2]);
+
+    var radius = d3.scale.sqrt()
+      .domain([0, maxValue/100]) // MAX value ratio OR todo: "d3.max(value)"  ||  16.5 / 100 = .165 
+      .range([0, 30]);
+
+    graph(radius, ratio, projection);
   });
 }
 
-function graph() {
+function graph(radius, ratio, projection) {
   d3.json("centroids/centroid-country.json", function(error, states) {
     if (error) throw error;
 
@@ -56,8 +57,8 @@ function graph() {
             value+=1;
 
             var point = projection(d.geometry.coordinates),
-                RatioReserve = value/500,
-                titre = "id="+d.id+", country="+d.properties.name+", value="+trueValue+"%";
+                RatioReserve = value/ratio, //default = 500
+                titre = "id: "+d.id+", country: "+d.properties.name+", value: "+trueValue+"%";
 
             return {
               x: point[0], y: point[1],
@@ -65,8 +66,7 @@ function graph() {
               r: radius(RatioReserve)*taille,
               titre: titre,
               trueValue: trueValue
-            };
-            
+            };   
           });
 
       force
@@ -82,8 +82,6 @@ function graph() {
         .each(function(){ 
           d3.select(this).attr("fill",  function(d) {return getColorFromValue(d.trueValue);});
           d3.select(this).attr("title",  function(d) { return d.titre; } );
-
-          //d3.select(this).html("<p>coucou</p>");
         });
 
     // FUNCTION OF GRAPH()
