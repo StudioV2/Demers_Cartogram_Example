@@ -17,5 +17,17 @@ This project use [Jquery](https://jquery.com/) and [d3.js](http://d3js.org/).
 
 The data used are fictive, they were created juste for this exemple.
 
+## How to install ?
+
+### Requirements
+
+This cartogram works directly with Firefox.
+For the others browser you need a local server like Mamp (Mac) or Wamp (Windows).
+The raison is the json cannot be load by Safari, Chrome, etc.. without a local server.
+
+### Install
+
+Just clone [this repository](https://github.com/StudioV2/Demers_Cartogram_Example) on your desktop and run index.html with you browser.
+
 
 

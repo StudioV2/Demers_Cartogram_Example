@@ -131,17 +131,18 @@ function graph(radius, ratio, projection) {
       };
     }
 
-    function getColorFromValue(value) {
-      if (value > 10) {
-          return "#B12535";
-      } else if (value > 5) {
-          return "#D76D43";
-      } else if (value > 0) {
-          return "#EFC46E";
-      } else {
-          return "#ECECED";
-      }
-    }
+    // FUNCTION IN INDEX.HTML
+    // function getColorFromValue(value) {
+    //   if (value > 10) {
+    //       return "#B12535";
+    //   } else if (value > 5) {
+    //       return "#D76D43";
+    //   } else if (value > 0) {
+    //       return "#EFC46E";
+    //   } else {
+    //       return "#ECECED";
+    //   }
+    // }
 
   });
 }
